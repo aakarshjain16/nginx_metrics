@@ -4,7 +4,7 @@ import bernhard
 import time
 from configparser import ConfigParser
 
-file='/var/nginx_metrics/code/metrics_config.ini'
+file='/opt/nginx_plus_metrics_fetcher/code/metrics_config.ini'
 config = ConfigParser()
 config.read(file)
 ip= config['api_config']['ip']

@@ -2,4 +2,4 @@
 
 exec 2>&1
 
-exec /usr/bin/python3.8 /var/nginx_metrics/code/metrics.py
+exec /usr/bin/python3.8 /opt/nginx_plus_metrics_fetcher/code/metrics.py
