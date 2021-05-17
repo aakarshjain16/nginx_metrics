@@ -17,7 +17,7 @@ c = bernhard.Client(host = riemann_host , port = riemann_port)
 
 def connections():
 
-        response = requests.get("http://10.57.11.218:3000/api/6/connections")
+        response = requests.get(url+"/connections")
         json_response = response.json()
         c.send({'service': 'connections' , 'attributes':json_response})
 
