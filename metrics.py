@@ -4,7 +4,7 @@ import bernhard
 import time
 from configparser import ConfigParser
 
-file='/var/local/scripts/nginx_metrics/metrics_config.ini'
+file='/var/nginx_metrics/code/metrics_config.ini'
 config = ConfigParser()
 config.read(file)
 ip= config['api_config']['ip']
@@ -14,7 +14,7 @@ riemann_host=config['riemann']['host']
 riemann_port= config['riemann']['port']
 url="http://"+ip+":"+port+"/api/"+api_version
 c = bernhard.Client(host = riemann_host , port = riemann_port)
-#c = bernhard.Client()
+
 def connections():
 
         response = requests.get("http://10.57.11.218:3000/api/6/connections")
